@@ -1,5 +1,5 @@
 /* =========================================
-   1. RESETEO Y FUENTES
+   1. FUENTES
    ========================================= */
 @font-face {
     font-display: swap;
@@ -133,7 +133,6 @@ h2.section-title {
     background-color: #f9f9fb;
 }
 
-/* Ahora usamos CSS Grid para forzar 3 columnas exactas */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -147,7 +146,7 @@ h2.section-title {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 100%; /* Ocupa el 100% de su columna en la grilla */
+    width: 100%; 
     height: 100%;
     padding: 24px; 
     gap: 16px;
@@ -340,9 +339,9 @@ h2.section-title {
     margin-bottom: 56px;
 }
 
-.footer-link-highlight {
-    color: #5b31d6 !important;
-    text-decoration: underline !important;
+.footer-list a.footer-link-highlight {
+    color: #5b31d6;
+    text-decoration: underline;
     font-weight: 600;
 }
 
@@ -365,25 +364,21 @@ h2.section-title {
 @media (max-width: 1024px) and (min-width: 768px) {
     .container { padding: 0 16px; }
     
-    /* Header comprimido pero mantiene la línea */
     .left-group { gap: 16px; }
     .desktop-nav { gap: 16px; }
     .btn { padding: 8px 16px; font-size: 0.85rem; }
     
     h2.section-title { font-size: 32px; }
 
-    /* Features: Mantiene las 3 columnas, escala los tamaños */
     .features-grid { gap: 16px; }
     .feature-card { padding: 16px; gap: 12px; }
     .feature-card h3 { font-size: 18px; }
     .feature-card p { font-size: 14px; }
     
-    /* Productos: Mantiene horizontal, reduce paddings */
     .product-card { padding: 32px; gap: 24px; }
     .product-content h3 { font-size: 22px; }
     .product-content p { font-size: 16px; }
     
-    /* Footer */
     .footer-links-grid { gap: 16px; }
 }
 
@@ -393,7 +388,6 @@ h2.section-title {
 @media (max-width: 767px) {
     .container { padding: 0 16px; }
     
-    /* Menú Hamburguesa */
     .header-container { justify-content: center; position: relative; }
     .desktop-nav, .action-buttons { display: none; }
     .mobile-menu-btn { 
@@ -413,14 +407,12 @@ h2.section-title {
     
     .features-section, .products-section { padding: 48px 0; }
 
-    /* Features: Una columna apilada */
     .features-grid { 
         grid-template-columns: 1fr; 
         gap: 16px; 
     }
     .feature-card { min-height: 184px; }
 
-    /* Productos: Apilados verticalmente */
     .product-card, .product-card.reverse {
         flex-direction: column;
         text-align: center;
@@ -432,7 +424,6 @@ h2.section-title {
     .product-content p { margin: 0 auto 24px auto; }
     .product-img { max-width: 280px; }
 
-    /* Footer: Columnas tipo acordeón o menú móvil */
     .footer { padding: 48px 0 32px 0; }
     .footer-logo-container { justify-content: flex-start; margin-bottom: 24px; }
     
